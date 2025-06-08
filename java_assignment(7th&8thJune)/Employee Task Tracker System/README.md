@@ -42,12 +42,11 @@ A **console-based Java application** that allows an admin to:
 
 ```
 src/
-└── com/tasktracker/
-    ├── model/       # Employee, Task, TaskStatus
-    ├── service/     # TaskManager, TaskRepository, TaskMonitor
-    ├── exception/   # TaskNotFoundException
-    ├── util/        # TaskUtils
-    └── Main.java    # Entry point
+└──── model/       # Employee, Task, TaskStatus
+  ├── service/     # TaskManager, TaskRepository, TaskMonitor
+  ├── exception/   # TaskNotFoundException
+  ├── util/        # TaskUtils
+  └── Main.java    # Entry point
 ```
 
 ### 💻 Compile
