@@ -49,19 +49,7 @@ src/
   └── Main.java    # Entry point
 ```
 
-### 💻 Compile
 
-From the project root:
-
-```bash
-javac -d out src/com/tasktracker/**/*.java
-```
-
-### ▶️ Run
-
-```bash
-java -cp out com.tasktracker.Main
-```
 
 > You must have Java 8 or above installed.
 
