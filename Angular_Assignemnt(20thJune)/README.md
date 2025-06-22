@@ -1,16 +1,41 @@
 # AmazonBook
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.2.
+AmazonBook is a modern Angular application for browsing and shopping books online. It features a clean UI, product cards, and a shopping cart experience similar to Amazon. The app demonstrates state management patterns inspired by NgRx for handling cart operations.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- Browse a list of books with images, prices, and stock status
+- Add books to the shopping cart (max 2 per book)
+- View cart contents on a dedicated cart page
+- See quantity for each book in the cart
+- Remove books from the cart or decrease their quantity
+- Responsive, card-based UI for both product and cart pages
 
-```bash
-ng serve
-```
+## State Management (NgRx-like Functionality)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+While this project does not use the full NgRx library, it implements similar state management concepts:
+
+- **Cart State**: Managed globally using a `CartService` with a `BehaviorSubject`, allowing all components to reactively access and update the cart.
+- **Actions**: Methods like `addToCart` and `removeFromCart` act as actions to update the cart state.
+- **Selectors**: Components subscribe to the cart observable (`cart$`) to select and display cart data.
+
+This approach provides a simple, scalable pattern for state management in Angular apps, inspired by NgRx principles.
+
+## Getting Started
+
+### Run the App
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the development server:
+   ```bash
+   ng serve
+   ```
+3. Open your browser and navigate to [http://localhost:4200/](http://localhost:4200/)
+
+The application will automatically reload whenever you modify any of the source files.
 
 ## Code scaffolding
 
