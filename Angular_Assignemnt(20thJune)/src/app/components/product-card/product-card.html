@@ -1,0 +1,21 @@
+<div class="product-card">
+  <img [src]="product.image" [alt]="product.title" class="product-image" />
+  <h2 class="product-title">{{ product.title }}</h2>
+  <p class="product-price">₹{{ product.price }}</p>
+  <p class="product-stock" [ngClass]="{ 'out-of-stock': !product.inStock }">
+    {{ product.inStock ? 'In Stock' : 'Out of Stock' }}
+  </p>
+
+  <ng-container *ngIf="product.inStock; else notifyMe">
+    <button class="add-cart-btn" (click)="addToCart()">Add to Cart</button>
+    <div class="warning" *ngIf="showWarning">
+      Can't have more than 2 quantity of this book.
+    </div>
+    <div class="success" *ngIf="showSuccess">
+      Added to cart!
+    </div>
+  </ng-container>
+  <ng-template #notifyMe>
+    <button class="notify-btn">Notify Me</button>
+  </ng-template>
+</div>

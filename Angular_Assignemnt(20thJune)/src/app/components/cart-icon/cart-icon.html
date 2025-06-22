@@ -1,0 +1,6 @@
+<button class="cart-btn">
+  <span class="material-icons">shopping_cart</span>
+  <ng-container *ngIf="itemCount$ | async as itemCount">
+    <span class="cart-badge" *ngIf="itemCount > 0">{{ itemCount }}</span>
+  </ng-container>
+</button>
