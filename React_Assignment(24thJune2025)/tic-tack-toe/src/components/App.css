@@ -1,0 +1,87 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body, .app-container {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.app-container {
+  font-family: 'Courier New', Courier, monospace;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.info {
+  margin-bottom: 1rem;
+  text-align: left;
+  font-size: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  /* margin-left: 10px; */
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 70px);
+  grid-template-rows: repeat(3, 70px);
+  background: black; /* Make grid background black */
+  border: none;
+  margin: 0 auto;
+  width: 210px;
+  height: 210px;
+}
+
+.cell {
+  width: 70px;
+  height: 70px;
+  font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: normal;
+  background: black; /* Cell background black */
+  color: white;      /* X and O in white */
+  border: 2px solid white; /* White borders for grid lines */
+  border-radius: 0;
+  cursor: pointer;
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: none;
+}
+.cell:focus,
+.cell:active,
+.cell:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.cell:hover {
+  outline: none;
+  box-shadow: none;
+}
+.cell:disabled {
+  background: black; /* Keep disabled cells black */
+  color: white;       /* Slightly dimmed symbol */
+  cursor: not-allowed;
+}
+
+.reset-btn {
+  padding: 0.5em 1.5em;
+  font-size: 1rem;
+  border-radius: 0;
+  border: 1px solid #000;
+  background: black;
+  color: white;
+  cursor: pointer;
+  transition: none;
+  /* margin-left: 10px; */
+  margin-top: 1rem;
+}
+.reset-btn:hover {
+  border-color: white;
+  background: black;
+}
